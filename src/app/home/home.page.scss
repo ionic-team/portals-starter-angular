@@ -37,3 +37,19 @@ pre {
   margin: 0;
   padding: 16px 8px;
 }
+
+.info-list button {
+  color: #fff;
+  background-color: #001ebd;
+  padding: 0 8px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: #4766ff;
+  }
+  &:active {
+    background-color: #4766ff;
+    border-color: #001ebd;
+  }
+}

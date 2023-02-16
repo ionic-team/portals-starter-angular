@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { getInitialContext } from "@ionic/portals";
+import { Component, Inject } from "@angular/core";
+import { INIITAL_CONTEXT } from "../tokens";
 
 @Component({
   selector: "app-home",
@@ -54,6 +54,7 @@ import { getInitialContext } from "@ionic/portals";
             >
               Android
             </a>
+            <button>Send an event to native</button>
           </li>
           <li>
             <p>Define your own API for communication</p>
@@ -78,15 +79,8 @@ import { getInitialContext } from "@ionic/portals";
       </div>
     </ion-content>`,
 })
-export class HomePage implements OnInit {
-  initialContext: any | null = null;
-
-  ngOnInit() {
-    this.initialContext = {
-      showHeader: false,
-      ...getInitialContext(),
-    };
+export class HomePage {
+  constructor(@Inject(INIITAL_CONTEXT) readonly initialContext: any) {
+    this.initialContext = initialContext;
   }
-
-  constructor() {}
 }
