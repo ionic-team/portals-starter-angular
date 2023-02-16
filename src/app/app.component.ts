@@ -1,9 +1,6 @@
 import { Component, Inject } from "@angular/core";
 import { Router } from "@angular/router";
 import { INIITAL_CONTEXT } from "./tokens";
-import { Component, Inject } from "@angular/core";
-import { Router } from "@angular/router";
-import { INIITAL_CONTEXT } from "./tokens";
 
 @Component({
   selector: "app-root",
